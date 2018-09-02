@@ -1,0 +1,372 @@
+@charset "utf-8";
+* {
+	margin: 0;
+	padding: 0;
+}
+body html {
+	height: 100%;
+	margin: 0;
+	overflow: hidden;
+}
+body {
+	background-image: url(BackgroundJPG.jpg);
+	background-size: cover;
+	overflow: hidden;
+}
+.sidenav  {
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-color: #333;
+	overflow-x: hidden;
+	padding-top: 100px;
+	transition: 0.3s; 
+}
+.sidenav a {
+	padding: 4px 32px 4px 4px;
+	text-decoration: none;
+	font-size: 2em;
+	color: #9F9F9F;
+	display: block;
+	transition: 0.2s;
+	font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", "sans-serif";
+	text-align: right;
+}
+.sidenav a:hover {
+	color: #D7D7D7;
+}
+.sidenav .closebtn {
+	position: absolute;
+	top: 25px;
+	right: 25px;
+	font-size: 4em;
+	margin-left: 50px;
+}
+@media screen and (max-height: 450px) {
+	.sidenav {padding-top: 15px;}
+	.sidenav a {font-size: 18px;}
+}
+.footer {
+	position: fixed;
+	width: 0;
+	z-index: 1;
+	bottom: 0;
+	left: 0;
+	float: left;
+	overflow: hidden;
+	transition: 0.2s;
+}
+footer {
+	color: #BDBDBD;
+	height: 20px;
+	text-align: center;
+	padding-top: 20px;
+}
+h1 {
+	text-align: left;
+	display: inline;
+	float: inherit;
+	font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", "sans-serif";
+	left: 0;
+	font-size: 5em;
+	position: relative;
+	padding-top: 3px;
+}
+#domov-img {
+	height: 300px;
+	float: left;
+	position: relative;
+	left: 150px;
+	top: 100px;
+	opacity: 0.9;
+	transition: 0.3s;
+}
+#domov-img:hover {
+	height: 800px;
+	top: -230px;
+	opacity: 1;
+}
+#sola-img {
+	height: 350px;
+	float: right;
+	position: relative;
+	right: 200px;
+	top: 100px;
+	opacity: 0.9;
+	transition: 0.3s;
+}
+#sola-img:hover {
+	height: 800px;
+	top: -230px;
+	opacity: 1;
+}
+#druzina-img {
+	height: 400px;
+	float: right;
+	position: relative;
+	right: 350px;
+	top: 100px;
+	opacity: 0.9;
+	transition: 0.3s;
+}
+#druzina-img:hover {
+	height: 800px;
+	top: -180px;
+	right: 450px;
+	padding-right: 150px;
+	opacity: 1;
+}
+#rk-cerklje-img {
+	height: 400px;
+	float: right;
+	position: relative;
+	right: 350px;
+	top: 100px;
+	opacity: 0.9;
+	transition: 0.3s;
+}
+#rk-cerklje-img:hover {
+	height: 800px;
+	top: -230px;
+	opacity: 1;
+}
+#london-img {
+	height: 250px;
+	float: right;
+	position: relative;
+	right: 250px;
+	top: 10px;
+	opacity: 0.9;
+	transition: 0.5s;
+}
+#london-img:hover {
+	height: 850px;
+	top: -600px;
+	opacity: 1;
+}
+.domovtext, .sectiontext {
+	width: 1300px;
+	transition: 0.5s;
+	float: left;
+	position: relative;
+	text-align: left;
+	margin-right: 100%;
+	padding-left: 93px;
+	padding-top: 20px;
+	font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", "sans-serif";
+	font-size: 1.5em;
+}
+.domovtext {
+	color: #DBDBDB;
+}
+.sectiontext {
+	color: #222;
+}
+.domovpodnaslov, .sectionpodnaslov {
+	width: 100%;
+	transition: 0.5s;
+	float: left;
+	position: relative;
+	text-align: left;
+	padding-left: 93px;
+	padding-top: 50px;
+	font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", "sans-serif";
+	font-size: 3em;
+}
+.domovpodnaslov {
+	color: #DBDBDB;
+}
+.sectionpodnaslov {
+	color: #222;
+}
+.openbtn {
+	padding-left: 5px;
+	transition: 0.5s;
+	font-size: 5.5em;
+}
+.openbtn:hover {
+	color: #f1f1f1;
+}
+span {
+	font-size: 3.4em;
+	position: relative;
+	text-align: center;
+	padding-bottom: 10px;
+	color: #222;
+}
+.main, .druzinamain, .hobijimain, .zanimivostimain, .galerijamain {
+	transition: 0.35s;
+	padding-left: 3px;
+	color: #222;
+}
+.main1 {
+	transition: 0.35s;
+	float: right;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+}
+.druzinamain1, .hobijimain1, .zanimivostimain1, .galerijamain1 {
+	transition: 0.35s;
+	float: right;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: #BFBFBF;
+}
+nav .homebtn {
+	padding-top: 30px;
+	padding-bottom: 40px;
+	font-size: 3em;
+	text-align: center;
+	transition: 0.3s;
+	color: #818181;
+}
+nav .homebtn:hover {
+	color: #f1f1f1;
+}
+#icon-facebook, #icon-instagram, #icon-twitter {
+	color: #222;
+	transition: 0.3s;
+}
+.facebooklogo, .twitterlogo, .instagramlogo {
+	stroke-width: 0;
+	stroke: currentColor;
+	fill: currentColor;
+	z-index: 1;
+	float: left;
+	height: 0;
+	bottom: 0;
+	padding-bottom: 35px;
+	position: fixed;
+	overflow: hidden;
+	transition: 0.3s;
+}
+#icon-facebook:hover, #icon-twitter:hover, #icon-instagram:hover {
+	color: #888;
+}
+ul {
+	list-style-type: none;
+	display: inline;
+	text-align: center;
+}
+.ftrtext {
+	display: block;
+	overflow: hidden;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 0;
+	height: 20px;
+	transition: 0.5s;
+}
+.navtext {
+	top: -100px;
+	opacity: 0;
+	transition: 0.3s;
+	transition-delay: 0.25s;
+}
+.domov {
+	top: 0;
+	left: 0;
+	position: fixed;
+	width: 100%;
+	background: #666;
+	padding-bottom: 10px;
+	border-bottom: solid #222;
+	transition: 1s;
+}
+.druzina, .hobiji, .zanimivosti, .galerija {
+	background: #666;
+	display: inline;
+	width: 0;
+	right: 0;
+	top: 0;
+	position: fixed;
+	overflow: hidden;
+	transition: 1s;
+	opacity: 0;
+}
+.galerijamain1 {
+	overflow-y: hidden;
+}
+.smallimages {
+	text-align: center;
+	display: block;
+	width: 100%;
+	padding-left: 30px;
+	padding-top: 75px;
+}
+#img1 {
+	width: 530px;
+	height: 400px;
+	display: block;
+	float: left;
+	position: relative;
+	padding: 5px;
+}
+.small-images {
+	width: 260px;
+	display: block;
+	float: left;
+	position: relative;
+	padding: 5px;
+}
+.bigimages {
+	display: block;
+	width: 100%;
+	text-align: center;
+	overflow: hidden;
+}
+.big-image-high {
+	left: 0;
+	padding-left: 300px;
+	transition: 1s;
+	height: 800px;
+	width: 600px;
+	float: left;
+	display: inline;
+	position: fixed;
+	top: -100%;
+	overflow: hidden;
+	opacity: 0;
+}
+.big-image-wide {
+	left: 0;
+	padding-left: 300px;
+	transition: 1s;
+	height: 600px;
+	float: left;
+	display: inline;
+	position: fixed;
+	top: -100%;
+	overflow: hidden;
+	opacity: 0;
+}
+.image-background {
+	width: 100%;
+	height: 100%;
+	background: #333;
+	opacity: 0;
+	transition: 1s;
+	display: block;
+	position: fixed;
+	top: -100%;
+	overflow: hidden;
+}
+.imgclosebtn {
+	position: fixed;
+	float: right;
+	top: -100%;
+	right: 40px;
+	font-size: 5em;
+	color: #111;
+	text-decoration: none;
+	transition: 1s;
+}
+.imgclosebtn:hover {
+	color: #999;
+}

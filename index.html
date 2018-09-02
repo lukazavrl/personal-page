@@ -1,0 +1,167 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Moja Spletna Stran</title>
+<meta name="author" content="Luka Zavrl" />
+<meta name="Description" content="To je moja spletna stran"/>
+<meta name="Keywords" content="opis, Luka Zavrl" />
+<meta name="robots" content="index, nofollow" />
+<link rel="stylesheet" type="text/css" href="spletnastrancss.css" />
+<script type="text/javascript" src="jssspletnastran.js"></script>
+</head>
+
+<body>
+<main>
+  <!--Navigation-->
+  <nav>
+    <div class="sidenav" id="mySidenav">
+      <div class="navtext" id="navtext">
+        <!--Nav close button-->
+        <a href="javascript:void(0)" class="closebtn" onClick="closeNav()">&times;</a>
+        <!--Home button-->
+        <a href="javascript:void(0)" onClick="openDomov()" class="homebtn">Domov</a>
+        <!--Content-->
+        <a href="javascript:void(0)" onClick="openDruzina()" style="border-bottom: 2px solid #212121">
+        Družina
+        </a> <a href="javascript:void(0)" onClick="openHobiji()" style="border-bottom: 2px solid #212121">
+        Hobiji
+        </a> <a href="javascript:void(0)" onClick="openZanimivosti()" style="border-bottom: 2px solid #212121">
+        Zanimivosti
+        </a> <a href="javascript:void(0)" onClick="openGalerija()" style="border-bottom: 2px solid #212121">
+        Galerija
+        </a>
+        <!--Footer-->
+        <footer class="footer" id="footer">
+          <!--Social-->
+          <div id="social" class="social">
+            <ul>
+              <li> <a target="_blank" href="https://www.facebook.com/luka.zavrl.14">
+                <div class="facebooklogo" id="facebooklogo">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="icon-facebook" id="icon-facebook">
+                    <path d="M19 6h5v-6h-5c-3.86 0-7 3.14-7 7v3h-4v6h4v16h6v-16h5l1-6h-6v-3c0-0.542 0.458-1 1-1z"></path>
+                  </svg>
+                </div>
+                </a> </li>
+              <li> <a target="_blank" href="https://www.twitter.com/LukaZavrl">
+                <div class="twitterlogo" id="twitterlogo">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="icon-twitter" id="icon-twitter">
+                    <path d="M32 7.075c-1.175 0.525-2.444 0.875-3.769 1.031 1.356-0.813 2.394-2.1 2.887-3.631-1.269 0.75-2.675 1.3-4.169 1.594-1.2-1.275-2.906-2.069-4.794-2.069-3.625 0-6.563 2.938-6.563 6.563 0 0.512 0.056 1.012 0.169 1.494-5.456-0.275-10.294-2.888-13.531-6.862-0.563 0.969-0.887 2.1-0.887 3.3 0 2.275 1.156 4.287 2.919 5.463-1.075-0.031-2.087-0.331-2.975-0.819 0 0.025 0 0.056 0 0.081 0 3.181 2.263 5.838 5.269 6.437-0.55 0.15-1.131 0.231-1.731 0.231-0.425 0-0.831-0.044-1.237-0.119 0.838 2.606 3.263 4.506 6.131 4.563-2.25 1.762-5.075 2.813-8.156 2.813-0.531 0-1.050-0.031-1.569-0.094 2.913 1.869 6.362 2.95 10.069 2.95 12.075 0 18.681-10.006 18.681-18.681 0-0.287-0.006-0.569-0.019-0.85 1.281-0.919 2.394-2.075 3.275-3.394z"></path>
+                  </svg>
+                </div>
+                </a> </li>
+              <li> <a target="_blank" href="https://www.instagram.com/lukazavrl/">
+                <div class="instagramlogo" id="instagramlogo">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="icon-instagram" id="icon-instagram">
+                    <path d="M16 2.881c4.275 0 4.781 0.019 6.462 0.094 1.563 0.069 2.406 0.331 2.969 0.55 0.744 0.288 1.281 0.638 1.837 1.194 0.563 0.563 0.906 1.094 1.2 1.838 0.219 0.563 0.481 1.412 0.55 2.969 0.075 1.688 0.094 2.194 0.094 6.463s-0.019 4.781-0.094 6.463c-0.069 1.563-0.331 2.406-0.55 2.969-0.288 0.744-0.637 1.281-1.194 1.837-0.563 0.563-1.094 0.906-1.837 1.2-0.563 0.219-1.413 0.481-2.969 0.55-1.688 0.075-2.194 0.094-6.463 0.094s-4.781-0.019-6.463-0.094c-1.563-0.069-2.406-0.331-2.969-0.55-0.744-0.288-1.281-0.637-1.838-1.194-0.563-0.563-0.906-1.094-1.2-1.837-0.219-0.563-0.481-1.413-0.55-2.969-0.075-1.688-0.094-2.194-0.094-6.463s0.019-4.781 0.094-6.463c0.069-1.563 0.331-2.406 0.55-2.969 0.288-0.744 0.638-1.281 1.194-1.838 0.563-0.563 1.094-0.906 1.838-1.2 0.563-0.219 1.412-0.481 2.969-0.55 1.681-0.075 2.188-0.094 6.463-0.094zM16 0c-4.344 0-4.887 0.019-6.594 0.094-1.7 0.075-2.869 0.35-3.881 0.744-1.056 0.412-1.95 0.956-2.837 1.85-0.894 0.888-1.438 1.781-1.85 2.831-0.394 1.019-0.669 2.181-0.744 3.881-0.075 1.713-0.094 2.256-0.094 6.6s0.019 4.887 0.094 6.594c0.075 1.7 0.35 2.869 0.744 3.881 0.413 1.056 0.956 1.95 1.85 2.837 0.887 0.887 1.781 1.438 2.831 1.844 1.019 0.394 2.181 0.669 3.881 0.744 1.706 0.075 2.25 0.094 6.594 0.094s4.888-0.019 6.594-0.094c1.7-0.075 2.869-0.35 3.881-0.744 1.050-0.406 1.944-0.956 2.831-1.844s1.438-1.781 1.844-2.831c0.394-1.019 0.669-2.181 0.744-3.881 0.075-1.706 0.094-2.25 0.094-6.594s-0.019-4.887-0.094-6.594c-0.075-1.7-0.35-2.869-0.744-3.881-0.394-1.063-0.938-1.956-1.831-2.844-0.887-0.887-1.781-1.438-2.831-1.844-1.019-0.394-2.181-0.669-3.881-0.744-1.712-0.081-2.256-0.1-6.6-0.1v0z"></path>
+                    <path d="M16 7.781c-4.537 0-8.219 3.681-8.219 8.219s3.681 8.219 8.219 8.219 8.219-3.681 8.219-8.219c0-4.537-3.681-8.219-8.219-8.219zM16 21.331c-2.944 0-5.331-2.387-5.331-5.331s2.387-5.331 5.331-5.331c2.944 0 5.331 2.387 5.331 5.331s-2.387 5.331-5.331 5.331z"></path>
+                    <path d="M26.462 7.456c0 1.060-0.859 1.919-1.919 1.919s-1.919-0.859-1.919-1.919c0-1.060 0.859-1.919 1.919-1.919s1.919 0.859 1.919 1.919z"></path>
+                  </svg>
+                </div>
+                </a> </li>
+            </ul>
+          </div>
+          <p class="ftrtext" id="ftrtext">&copy; Luka Zavrl | Radovljica 2018</p>
+        </footer>
+      </div>
+    </div>
+  </nav>
+  <!--Section-->
+  <!--Domov-->
+  <div class="domov" id="domov"> <span style="cursor: pointer" onClick="openNav()" class="openbtn">&#9776;</span>
+    <h1 class="main" id="main">Domov</h1>
+    <section class="main1" id="main1">
+     <h2 class="domovpodnaslov">O meni</h2>
+      <p class="domovtext" id="domovtext">Ime mi je Luka Zavrl, star sem 16 let, rodil pa sem se 3. novembra 2001. Že celo življenje živim v Preddvoru. To je majhna vas pod gorami blizu Kranja. Živim z družino. Obiskujem Ekonomsko Gimnazijo in Srednjo Šolo v Radovljici, na kratko EGSŠ.</p>
+      <img id="domov-img" src="Images/IMG1.JPG">
+      <img id="sola-img" src="Images/Sola-img.jpg">
+    </section>
+  </div>
+  <!--Druzina-->
+  <div class="druzina" id="druzina"> <span style="cursor: pointer" onClick="openNav()" class="openbtn">&#9776;</span>
+    <h1 class="druzinamain" id="druzinamain">Družina</h1>
+    <section class="druzinamain1" id="druzinamain1">
+      <h2 class="sectionpodnaslov"></h2>
+      <p class="sectiontext">Imam enega brata z imenom Jan. Mati je ime Nataša, očetu pa Grega. Imamo pa tudi Haskija, staro 4 mesece z imenom Kala. V hiši živimo z babico Adi ter dedkom Rajkom. </p>
+      <img id="druzina-img" src="Images/IMG3.jpg">
+    </section>
+  </div>
+  <!--Hobiji-->
+  <div class="hobiji" id="hobiji"> <span style="cursor: pointer" onClick="openNav()" class="openbtn">&#9776;</span>
+    <h1 class="hobijimain" id="hobijimain">Hobiji</h1>
+    <section class="hobijimain1" id="hobijimain1">
+      <h2 class="sectionpodnaslov">Rokomet</h2>
+      <p class="sectiontext">Že 8 leto igram rokomet v klubu RK Cerklje. najprej sem igral na različnih pozicijah, a čez nekaj časa sem se odločil da bom igral v golu, kjer igram še zdaj. Pred rokometom pa sem dobro leto igral nogomet.</p>
+		<img id="rk-cerklje-img" src="Images/rk-cerklje.jpg">
+    </section>
+  </div>
+  <!--Zanimivosti-->
+  <div class="zanimivosti" id="zanimivosti"> <span style="cursor: pointer" onClick="openNav()" class="openbtn">&#9776;</span>
+    <h1 class="zanimivostimain" id="zanimivostimain">Zanimivosti</h1>
+    <section class="zanimivostimain1" id="zanimivostimain1">
+      <h2 class="sectionpodnaslov" id="sectionpodnaslov">Hrana</h2>
+      <p class="sectiontext">Zelo rad jem dunajski zrezek in pomfrit, palačinke ter kaj podobnega. Zelo rad imam tudi mehiško in kitajsko hrano.</p>
+      <h2 class="sectionpodnaslov">Potovanja</h2>
+		<p class="sectiontext">Kar dosti tudi potujemo z družino. Babica in dedek imata v Barbarigi, Hrvaška, svoj apartma, zato smo veliko časa tam. Bili smo tudi že v Londonu, Egiptu in Tuniziji, in pa seveda v vseh sosednjih državah.</p>
+		<h2 class="sectionpodnaslov">Računalništvo</h2>
+		<p class="sectiontext">Zelo rad delam karkoli na računalniku, zato sem se tudi odločil za to srednjo šolo. Programiranje pa me njabolj veseli, zato sem tudi doma že delal spletne strani. Veseli me tudi oblikovanje, recimo na programu Adobe Illustrator.</p>
+   <img id="london-img" src="Images/IMG15.jpg">
+    </section>
+  </div>
+  <!--Galerija-->
+  <div class="galerija" id="galerija"> <span style="cursor: pointer" onClick="openNav()" class="openbtn">&#9776;</span>
+    <h1 class="galerijamain" id="galerijamain">Galerija</h1>
+    <section class="galerijamain1" id="galerijamain1">
+      <div class="smallimages" id="galerijatext"> <a onClick="openIMG1()"><img id="img1" src="SmallImages/IMG1.JPG"></a> <a onClick="openIMG2()"><img class="small-images" id="img2" src="SmallImages/IMG2.jpg"></a> <a onClick="openIMG3()"><img class="small-images" id="img3" src="SmallImages/IMG3.jpg"></a> <a onClick="openIMG4()"><img class="small-images" id="img4" src="SmallImages/IMG4.jpg"></a> <a onClick="openIMG5()"><img class="small-images" id="img5" src="SmallImages/IMG5.jpg"></a> <a onClick="openIMG6()"><img class="small-images" id="img6" src="SmallImages/IMG6.jpg"></a> <a onClick="openIMG7()"><img class="small-images" id="img7" src="SmallImages/IMG7.jpg"></a> <a onClick="openIMG8()"><img class="small-images" id="img8" src="SmallImages/IMG8.jpg"></a> <a onClick="openIMG9()"><img class="small-images" id="img9" src="SmallImages/IMG9.jpg"></a> <a onClick="openIMG10()"><img class="small-images" id="img10" src="SmallImages/IMG10.jpeg"></a> <a onClick="openIMG11()"><img class="small-images" id="img11" src="SmallImages/IMG11.jpg"></a> <a onClick="openIMG12()"><img class="small-images" id="img12" src="SmallImages/IMG12.jpg"></a> <a onClick="openIMG13()"><img class="small-images" id="img13" src="SmallImages/IMG13.jpg"></a> <a onClick="openIMG14()"><img class="small-images" id="img14" src="SmallImages/IMG14.jpg"></a> <a onClick="openIMG15()"><img class="small-images" id="img15" src="SmallImages/IMG15.jpg"></a> </div>
+      <div class="bigimages">
+        <div id="image-background1" class="image-background"> <a href="javascript:void(0)" class="imgclosebtn" id="imgclosebtn1" onClick="closeIMG1()">&times;</a>
+          <div><img class="big-image-high" id="IMG1" src="Images/IMG1.JPG"> </div>
+        </div>
+        <div id="image-background2" class="image-background"> <a href="javascript:void(0)" class="imgclosebtn" id="imgclosebtn2" onClick="closeIMG2()">&times;</a>
+          <div><img class="big-image-wide" id="IMG2" src="Images/IMG2.jpg"> </div>
+        </div>
+        <div id="image-background3" class="image-background"> <a href="javascript:void(0)" class="imgclosebtn" id="imgclosebtn3" onClick="closeIMG3()">&times;</a>
+          <div><img class="big-image-high" id="IMG3" src="Images/IMG3.jpg"> </div>
+        </div>
+        <div id="image-background4" class="image-background"> <a href="javascript:void(0)" class="imgclosebtn" id="imgclosebtn4" onClick="closeIMG4()">&times;</a>
+          <div><img class="big-image-wide" id="IMG4" src="Images/IMG4.jpg"> </div>
+        </div>
+        <div id="image-background5" class="image-background"> <a href="javascript:void(0)" class="imgclosebtn" id="imgclosebtn5" onClick="closeIMG5()">&times;</a>
+          <div><img class="big-image-wide" id="IMG5" src="Images/IMG5.jpg"> </div>
+        </div>
+        <div id="image-background6" class="image-background"> <a href="javascript:void(0)" class="imgclosebtn" id="imgclosebtn6" onClick="closeIMG6()">&times;</a>
+          <div><img class="big-image-wide" id="IMG6" src="Images/IMG6.jpg"> </div>
+        </div>
+        <div id="image-background7" class="image-background"> <a href="javascript:void(0)" class="imgclosebtn" id="imgclosebtn7" onClick="closeIMG7()">&times;</a>
+          <div><img class="big-image-wide" id="IMG7" src="Images/IMG7.jpg"> </div>
+        </div>
+        <div id="image-background8" class="image-background"> <a href="javascript:void(0)" class="imgclosebtn" id="imgclosebtn8" onClick="closeIMG8()">&times;</a>
+          <div><img class="big-image-wide" id="IMG8" src="Images/IMG8.jpg"> </div>
+        </div>
+        <div id="image-background9" class="image-background"> <a href="javascript:void(0)" class="imgclosebtn" id="imgclosebtn9" onClick="closeIMG9()">&times;</a>
+          <div><img class="big-image-wide" id="IMG9" src="Images/IMG9.jpg"> </div>
+        </div>
+        <div id="image-background10" class="image-background"> <a href="javascript:void(0)" class="imgclosebtn" id="imgclosebtn10" onClick="closeIMG10()">&times;</a>
+          <div><img class="big-image-wide" id="IMG10" src="Images/IMG10.jpeg"> </div>
+        </div>
+        <div id="image-background11" class="image-background"> <a href="javascript:void(0)" class="imgclosebtn" id="imgclosebtn11" onClick="closeIMG11()">&times;</a>
+          <div><img class="big-image-high" id="IMG11" src="Images/IMG11.jpg"> </div>
+        </div>
+        <div id="image-background12" class="image-background"> <a href="javascript:void(0)" class="imgclosebtn" id="imgclosebtn12" onClick="closeIMG12()">&times;</a>
+          <div><img class="big-image-wide" id="IMG12" src="Images/IMG12.jpg"> </div>
+        </div>
+        <div id="image-background13" class="image-background"> <a href="javascript:void(0)" class="imgclosebtn" id="imgclosebtn13" onClick="closeIMG13()">&times;</a>
+          <div><img class="big-image-wide" id="IMG13" src="Images/IMG13.jpg"> </div>
+        </div>
+        <div id="image-background14" class="image-background"> <a href="javascript:void(0)" class="imgclosebtn" id="imgclosebtn14" onClick="closeIMG14()">&times;</a>
+          <div><img class="big-image-wide" id="IMG14" src="Images/IMG14.jpg"> </div>
+        </div>
+        <div id="image-background15" class="image-background"> <a href="javascript:void(0)" class="imgclosebtn" id="imgclosebtn15" onClick="closeIMG15()">&times;</a>
+          <div><img class="big-image-high" id="IMG15" src="Images/IMG15.jpg"> </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+</body>
+</html>
